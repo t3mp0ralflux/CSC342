@@ -1,0 +1,109 @@
+#include <stdlib.h>
+#include "memory.h"
+#include "queue.h"
+
+/****************************************************************************/
+/*                                                                          */
+/*                                                                          */
+/*                              Module MEMORY                               */
+/*                            Internal Routines                             */
+/*                                                                          */
+/*                                                                          */
+/****************************************************************************/
+
+/*char *toString(FRAME *f)
+{
+    static char result[BUFSIZ];
+
+    // For each from that is printed, print the frame number, pcb id of the
+    // process that owns it, the page number of the page it contains,
+    // D or C if it is dirty or clean, and the lock count.
+
+    // Also print refbit if we are using Second Chance
+    if (f == NULL) sprintf (result, "(null) ");
+    else sprintf (result, "Frame %d(pcb-%d,page-%d,%c,lock-%d,refbit-%d) ",
+               (f - &Frame_Tbl[0]),
+               f->pcb->pcb_id, f->page_id,
+               (f->dirty ? 'D' : 'C') , f->lock_count, f->ref_bit);
+
+    return result;
+}*/
+
+
+void memory_init()
+{
+        Queue myQueue;
+//        initQueue(&myQueue);
+        FRAME Frame_Tbl[MAX_FRAME];
+        Frame_Tbl[0].free = true;
+        Frame_Tbl[0].pcb = NULL;
+        Frame_Tbl[0].page_id = 0;
+        Frame_Tbl[0].dirty = false;
+        Frame_Tbl[0].lock_count = 0;
+        Frame_Tbl[0].ref_bit = 0;
+}
+
+
+void prepage(PCB *pcb)
+{
+        return;
+}
+
+
+int start_cost(PCB *pcb)
+{
+        return 0;
+}
+
+
+
+void deallocate(PCB *pcb)
+{
+}
+
+
+
+void get_page(PCB *pcb, int page_id)
+{
+        PAGE_ENTRY *page = &(pcb->page_tbl->page_entry[page_id]);
+
+
+
+}
+
+
+void lock_page(IORB *iorb)
+{
+}
+
+
+
+void unlock_page(IORB  *iorb)
+{
+}
+
+
+
+void reference(int logic_addr, REFER_ACTION action)
+{
+        int page;
+        int valid;
+        float offset;
+        page = (logic_addr/PAGE_SIZE);
+        offset = (logic_addr % PAGE_SIZE);
+
+        if(page <= PAGE_SIZE && offset <=PAGE_SIZE){
+            valid = 1;
+            printf("Valid Page");
+        }else{
+            valid = 0;
+            printf("Invalid Page");
+            };
+
+
+}
+
+int main()
+{
+    reference(865, load);
+}

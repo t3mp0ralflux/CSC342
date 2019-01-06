@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1491604050 source:c:\users\brent\google drive\csc342\assignment 4\assignment 4\main.c
+	<stdio.h>
+	"files.h"
+
+1491352408 c:\users\brent\google drive\csc342\assignment 4\assignment 4\files.h
+	<stdio.h>
+

@@ -1,0 +1,44 @@
+#include "queue.h"
+#include "devices.h"
+
+
+
+/****************************************************************************/
+/*                                                                          */
+/*                                                                          */
+/*                              Module DEVICES                              */
+/*                             Internal Routines                            */
+/*                                                                          */
+/*                                                                          */
+/****************************************************************************/
+
+
+void devices_init()
+{
+        Queue[MAX_DEV] *myQueue;
+        initQueue(myQueue);
+}
+
+
+
+void enq_io(iorb)
+IORB *iorb;
+{
+}
+
+
+
+void deq_io(iorb)
+IORB *iorb;
+{
+}
+
+
+
+void purge_iorbs(pcb)
+PCB *pcb;
+{
+}
+
+
+/* end of module */

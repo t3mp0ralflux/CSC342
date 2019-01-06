@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1490456358 source:c:\users\brent\google drive\csc342\test\main.c
+	<stdlib.h>
+	"memory.h"
+	"queue.h"
+
+1490455323 c:\users\brent\google drive\csc342\test\memory.h
+
+1490455319 c:\users\brent\google drive\csc342\test\queue.h
+	<stdio.h>
+

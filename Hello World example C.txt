@@ -1,0 +1,9 @@
+/* Multiline Comment
+*/
+//single line comment
+#include <studio.h>
+Int main(int argu, char *argu[])
+{
+	Printf("hello world\n");
+	Return 0;
+	}
